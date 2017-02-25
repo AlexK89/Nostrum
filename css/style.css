@@ -1,0 +1,136 @@
+/*Nav bar*/
+/*==================*/
+.sticky {
+    padding: 0;
+    background: rgb(244, 244, 244);
+    border: 0;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.sticky li {
+    height: 80px;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.nav>li>a {
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 1.2em;
+}
+
+.navbar-default .navbar-nav>li>a {
+    height: 80px;
+    padding-top: 30px;
+    color: #554c82;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.navbar-default .navbar-nav>li>a:focus {
+    color: #554c82;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    background: #554c82;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.navbar-default .navbar-nav>li>a:hover:focus {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover:active {
+    background: #554c82;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #554c82;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background: #554c82;
+}
+.navbar-default .navbar-toggle:hover .icon-bar {
+    background: #fff;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default:focus {
+    background: #554c82;
+    color: #fff;
+}
+.navbar-toggle {
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+
+
+/*Carousel*/
+/*==================*/
+
+#myCarousel {
+  top:80px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  z-index: -1;
+}
+.carousel-inner>.item img {
+  margin: auto;
+}
+.item .shadow {
+  height: 100%;
+  width: 100%;
+  background:rgba(255,255,255,.5);
+  position: absolute;
+}
+/*=====================*/
+
+/*First block*/
+/*==================*/
+.first-block {
+  width: 100vw;
+  background: rgba(0,0,0,0.4);
+}
+.first-block-content {
+  position: relative;
+  height: inherit;
+  cursor: default;
+}
+.first-block-content {
+  position: relative;
+  margin: auto;
+  top: 40%;
+  font-family: 'Merriweather', serif;
+  color: #fff;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.4),
+               0px 3px 2px rgba(0, 0, 0, 0.1),
+               0px 4px 3px rgba(0, 0, 0, 0.1)
+}
+.first-block-content h1 {
+  text-align: center;
+  font-size: 4em;
+  letter-spacing: 10px;
+  padding-left: 10px;
+}
+.first-block-content hr {
+  width: 100px;
+  margin: auto;
+}
+.first-block-content h3 {
+  text-align: center;
+  letter-spacing: 4px;
+}
+.second-block {
+  height: 1000px;
+  background: pink;
+}

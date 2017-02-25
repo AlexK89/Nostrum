@@ -1,12 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Nostrum</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nostrum</title>
 </head>
+
 <body>
-  <h1>Hello</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="sticky navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="./img/logo.png" height="50px" alt=""></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Про Компанію</a></li>
+                            <li><a href="#">Для швей</a></li>
+                            <li><a href="#">Для водіїв</a></li>
+                            <li><a href="#">Контакти</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </div>
+        <div class="row">
+            <div class="conteiner-fluid first-block">
+                <div class="col-xs-12 first-block-content">
+                    <h1>NOSTRUM</h1>
+                    <hr>
+                    <h3>ПРАЦЕВЛАШТУВАННЯ ЗА КОРДОНОМ</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="conteiner-fluid second-block">
+                <div class="col-xs-12">
+                    <h1>Cool Corporation</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Slider
+  =========================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="shadow"></div>
+                <img src="./img/bg1.jpg" alt="First Slide">
+            </div>
+            <div class="item">
+                <div class="shadow"></div>
+                <img src="./img/bg3.jpg" alt="Second Slide">
+            </div>
+            <div class="item">
+                <div class="shadow"></div>
+                <img src="./img/bg2.jpg" alt="Third Slide">
+            </div>
+            <div class="item">
+                <div class="shadow"></div>
+                <img src="./img/bg4.jpg" alt="Fourth Slide">
+            </div>
+        </div>
+    </div>
+    <!-- ================================
+================================ -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
+    <script src="./js/jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script src="./js/bootstrap.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#myCarousel").carousel({
+                interval: 2000
+            });
+            var $changeHeight = function(){
+              $('.first-block').resize(function() {
+                  var $Carousel = $('.item').height()+80;
+                  $(this).height($Carousel)
+              });
+              $('.first-block').resize();
+            }
+
+            $changeHeight();
+
+            var w = $(window).width();
+            $(window).resize(function() {
+                if ($(window).width() == w) return;
+                w = $(window).width();
+                $changeHeight();
+            });
+        });
+    </script>
 </body>
+
 </html>
