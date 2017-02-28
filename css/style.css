@@ -243,5 +243,7 @@ body {
   .fourth-block article {
     border-radius: 0;
     overflow: hidden;
+    padding: 10px;
   }
+
 }
