@@ -1,8 +1,11 @@
+body {
+  font-family: 'Merriweather', serif;
+}
 /*Nav bar*/
 /*==================*/
 .sticky {
     padding: 0;
-    background: rgb(244, 244, 244);
+    background: rgb(250, 249, 255);
     border: 0;
     position: fixed;
     left: 0;
@@ -21,15 +24,20 @@
     border-radius: 0;
     margin-bottom: 0;
 }
-.nav>li>a {
-    padding-left: 25px;
-    padding-right: 25px;
-    font-size: 1.2em;
+.navbar-brand {
+  height: inherit;
+  padding-top: 20px;
+}
+.navbar-brand img {
+  /*margin-top: 5px;*/
 }
 
 .navbar-default .navbar-nav>li>a {
-    height: 80px;
-    padding-top: 30px;
+
+  padding: 30px 15px 15px 15px;
+  font-size: 1.2em;
+    height: inherit;
+
     color: #554c82;
     text-align: center;
     transition: 0.4s;
@@ -71,8 +79,6 @@
     margin-top: 23px;
     margin-bottom: 23px;
 }
-
-
 /*Carousel*/
 /*==================*/
 
@@ -86,11 +92,15 @@
 }
 .carousel-inner>.item img {
   margin: auto;
+  width: auto;
+  height: 100vh;
+  width: 100vw;
+  max-width: none;
 }
 .item .shadow {
-  height: 100%;
-  width: 100%;
-  background:rgba(255,255,255,.5);
+  width: 100vw;
+  height: 100vh;
+  background:rgba(255,255,255,.3);
   position: absolute;
 }
 /*=====================*/
@@ -102,27 +112,23 @@
   background: rgba(0,0,0,0.4);
 }
 .first-block-content {
-  position: relative;
   height: inherit;
   cursor: default;
-}
-.first-block-content {
   position: relative;
-  margin: auto;
-  top: 40%;
-  font-family: 'Merriweather', serif;
   color: #fff;
   text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.4),
                0px 3px 2px rgba(0, 0, 0, 0.1),
                0px 4px 3px rgba(0, 0, 0, 0.1)
 }
 .first-block-content h1 {
+  padding-top: 22%;
+  padding-left: 10px;
   text-align: center;
   font-size: 4em;
   letter-spacing: 10px;
-  padding-left: 10px;
 }
-.first-block-content hr {
+.first-block-content hr,
+.second-block-text hr {
   width: 100px;
   margin: auto;
 }
@@ -130,7 +136,112 @@
   text-align: center;
   letter-spacing: 4px;
 }
+
+/*Second block*/
+/*=====================*/
 .second-block {
-  height: 1000px;
-  background: pink;
+  background: rgba(250, 249, 255,.9);
+  margin-bottom: 100px;
+}
+.second-block-text {
+  padding-top: 90px;
+  font-size: 1.6em;
+  line-height: 1.7em;
+  text-align: center;
+  font-style: italic;
+}
+.second-block-text p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.second-block-text hr {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-color: #bcbcbc;
+}
+.second-block-text h2 {
+  letter-spacing: 2px;
+  font-size: 1.7em;
+  margin-bottom: 90px;
+}
+
+/*Third block*/
+/*=====================*/
+.third-block article,
+.fourth-block article {
+  margin-bottom: 100px;
+  min-height: 400px;
+  background: rgba(250, 249, 255,.9);
+  border-radius: 10px;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+}
+.third-block-photo {
+  background: url('../img/sector-1.jpg') center no-repeat;
+}
+.third-block-photo,
+.fourth-block-photo {
+  height: 440px;
+  background-size: cover;
+  clear:both;
+}
+
+.third-block-content,
+.fourth-block-content {
+  line-height: 2em;
+  padding-top: 30px;
+  clear:both;
+}
+.third-block-content p:last-child,
+.fourth-block-content p:last-child {
+  margin-bottom: 40px;
+}
+/*Fourth block*/
+/*=====================*/
+.fourth-block article {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.fourth-block-photo {
+  background: url('../img/sector-2.jpg') center no-repeat;
+}
+/*Media query*/
+/*=====================*/
+@media (max-width:1000px) {
+  .carousel-inner>.item img {
+    width: auto;
+  }
+  .first-block-content h1 {
+    padding-top: 300px;
+  }
+}
+@media (max-width:991px) {
+  .fourth-block article {
+    display: block;
+  }
+}
+@media (max-width:767px) {
+  .first-block-content h1 {
+    padding-top: 170px;
+    font-size: 3em;
+    letter-spacing: 5px;
+  }
+  .first-block-content h3 {
+    font-size: 1.1em;
+    line-height: 2em;
+  }
+  .second-block-text {
+    font-size: 1.1em;
+    line-height: 1.3em;
+  }
+  .second-block-text h2 {
+    font-size: 1.4em;
+    line-height: 1.6em;
+  }
+  .third-block article,
+  .fourth-block article {
+    border-radius: 0;
+    overflow: hidden;
+  }
 }
