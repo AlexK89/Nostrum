@@ -1,5 +1,5 @@
 body {
-  font-family: 'Merriweather', serif;
+  font-family: 'Roboto', serif;
 }
 /*Nav bar*/
 /*==================*/
@@ -280,17 +280,18 @@ form button {
     height: 60px;
     margin: auto;
     border: none;
-    background-color: #554c82;
-    color: #fff;
+    background-color:rgba(250, 249, 255,.1);
+    border: 5px solid #554c82;
+    color: #554c82;
     font-size: 2em;
     letter-spacing: 3px;
     transition: 0.4s;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
 }
 
 form button:hover {
+  border: 5px solid #554c82;
     background-color: #7b6fb7;
-    border: 1px solid #7b6fb7;
     color: #fff;
 }
 
