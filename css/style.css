@@ -178,7 +178,7 @@ body {
   padding-right: 0;
 }
 .third-block-photo {
-  background: url('../img/sector-1.jpg') center no-repeat;
+  background: url('../img/sector-1-compressor.jpg') center no-repeat;
 }
 .third-block-photo,
 .fourth-block-photo {
@@ -216,7 +216,14 @@ body {
   flex-direction: row-reverse;
 }
 .fourth-block-photo {
-  background: url('../img/sector-2.jpg') center no-repeat;
+  background: url('../img/sector-2-compressor.jpg') center no-repeat;
+}
+.fourth-block-content a {
+  text-decoration: none;
+  color: #554c82;
+}
+.fourth-block-content a:hover {
+  color: #ff4081;
 }
 
 /*Contact block*/
@@ -287,6 +294,38 @@ form button:hover {
     color: #fff;
 }
 
+/*Footer block*/
+/*=====================*/
+.footer-block {
+  background: rgba(250, 249, 255,.9);
+  text-align: center;
+}
+.footer-block h2 {
+  color: #554c82;
+}
+.footer-block h5 {
+  font-size: 1.2em;
+}
+.footer-block p {
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+.footer-block a {
+    color: #554c82;
+}
+.footer-block h2:last-child {
+  margin-top: 10px;
+}
+#email {
+  margin-top: 0;
+  text-decoration: none;
+  font-size: .7em;
+  transition: 0.3s;
+}
+#email:hover {
+  color: #7b6fb7;
+  transition: 0.3s;
+}
 /*Media query*/
 /*=====================*/
 @media (max-width:1000px) {
